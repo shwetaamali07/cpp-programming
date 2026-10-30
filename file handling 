@@ -1,0 +1,26 @@
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    string name;
+
+    ofstream file("student.txt");
+
+    cout << "Enter student name: ";
+    cin >> name;
+
+    file << name;
+    file.close();
+
+    ifstream readFile("student.txt");
+
+    readFile >> name;
+
+    cout << "Data from file: " << name << endl;
+
+    readFile.close();
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+
+#include <iostream>
+using namespace std;
+
+class Student {
+public:
+    int rollNo = 105;
+};
+
+class Marks {
+public:
+    int m1 = 80, m2 = 90;
+};
+
+class Result : public Student, public Marks {
+public:
+    void display() {
+        cout << "Roll Number: " << rollNo << endl;
+        cout << "Subject 1 Marks: " << m1 << endl;
+        cout << "Subject 2 Marks: " << m2 << endl;
+        cout << "Total Marks: " << m1 + m2 << endl;
+    }
+};
+
+int main() {
+    Result r;
+    r.display();
+
+    return 0;
+}
